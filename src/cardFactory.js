@@ -27,10 +27,20 @@ AFRAME.registerComponent('card', {
     self.text.setAttribute('align', 'center');
     self.el.appendChild(self.text);
     self.box.addEventListener('mouseenter', function () {
-    self.box.setAttribute('scale', {x: 1.3, y: 1.3, z: 1.3});
-  });
+      self.box.setAttribute('scale', {x: 1.3, y: 1.3, z: 1.3});
+      self.text.setAttribute('width', self.data.text_width * 1.5);
+      self.text.setAttribute('position', {
+        x: self.data.position.x,
+        y: self.data.position.y - 2,
+        z: self.data.position.z + 0.7});
+    });
     self.box.addEventListener('mouseleave', function () {
       self.box.setAttribute('scale', {x: 1, y: 1, z: 1});
+      self.text.setAttribute('width', self.data.text_width);
+      self.text.setAttribute('position', {
+        x: self.data.position.x,
+        y: self.data.position.y - 2,
+        z: self.data.position.z + 0.5});
     });
   }
 });
