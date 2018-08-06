@@ -1,5 +1,5 @@
 {
-  "name": "cards-jgines",
+  "name": "cards-doubleContessa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -28,6 +28,7 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "aframe": "^0.8.2"
+    "aframe": "^0.8.2",
+    "three": "^0.95.0"
   }
 }
